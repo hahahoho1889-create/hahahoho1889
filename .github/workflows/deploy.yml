@@ -19,6 +19,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       NEXT_PUBLIC_BASE_PATH: /hahahoho1889
+      # Signals GitHub Pages target for tooling; avoids configure-pages (needs an enabled Pages site).
+      GITHUB_PAGES: true
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -28,9 +30,6 @@ jobs:
         with:
           node-version: 20
           cache: npm
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
 
       - name: Install dependencies
         run: npm ci
@@ -53,6 +52,9 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
+    permissions:
+      pages: write
+      id-token: write
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
