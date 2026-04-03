@@ -54,7 +54,7 @@ export default function PersonalWebsiteStarter() {
             <br />
             <span
               className="inline-block whitespace-nowrap"
-              style={{ fontSize: "calc(1em - 2pt)", lineHeight: 1 }}
+              style={{ fontSize: "calc(1em - 2pt)", lineHeight: 1, letterSpacing: "-0.02em" }}
             >
               AI 강사 <span className="text-neutral-500">박도윤</span> 입니다.
             </span>
