@@ -50,7 +50,9 @@ export default function PersonalWebsiteStarter() {
         <div>
           <p className="text-sm tracking-[0.2em] uppercase text-neutral-500 mb-4">My Website</p>
           <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
-            안녕하세요, AI 강사 <span className="text-neutral-500">박도윤</span> 입니다.
+            안녕하세요,
+            <br />
+            AI 강사 <span className="text-neutral-500">박도윤</span>입니다.
           </h1>
           <p className="text-lg text-neutral-600 leading-8 mb-8">
             AI 활용 강사이자 콘텐츠 크리에이터로서, 기술을 쉽게 전달하고 실전에서 활용할 수 있는
