@@ -1,4 +1,6 @@
 export default function PersonalWebsiteStarter() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
   return (
     <main className="min-h-screen bg-white text-neutral-900">
       {/* Top Navigation */}
@@ -90,7 +92,11 @@ export default function PersonalWebsiteStarter() {
 
         <div className="bg-neutral-100 rounded-3xl p-8 shadow-sm">
           <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-neutral-200">
-            <img src="/profile.jpg" alt="박도윤 프로필 사진" className="w-full h-full object-cover" />
+            <img
+              src={`${basePath}/profile.jpg`}
+              alt="박도윤 프로필 사진"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </section>
@@ -117,9 +123,9 @@ export default function PersonalWebsiteStarter() {
         <h2 className="text-2xl font-semibold mb-8">Projects</h2>
         <div className="grid md:grid-cols-3 gap-6">
           {[
-            { title: "AI 강의 콘텐츠", src: "/profile.jpg", alt: "AI 강의 콘텐츠 썸네일" },
-            { title: "유튜브 채널 (구리)", src: "/insta1.png", alt: "유튜브 채널 구리 썸네일" },
-            { title: "블로그 프로젝트", src: "/insta2.png", alt: "블로그 프로젝트 썸네일" },
+            { title: "AI 강의 콘텐츠", src: `${basePath}/profile.jpg`, alt: "AI 강의 콘텐츠 썸네일" },
+            { title: "유튜브 채널 (구리)", src: `${basePath}/insta1.png`, alt: "유튜브 채널 구리 썸네일" },
+            { title: "블로그 프로젝트", src: `${basePath}/insta2.png`, alt: "블로그 프로젝트 썸네일" },
           ].map((item) => (
             <article
               key={item.title}
@@ -182,11 +188,11 @@ export default function PersonalWebsiteStarter() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-white rounded-2xl p-3">
-                <img src="/insta1.png" alt="일상 인스타 QR" className="rounded-xl" />
+                <img src={`${basePath}/insta1.png`} alt="일상 인스타 QR" className="rounded-xl" />
                 <p className="text-xs text-center mt-2 text-neutral-700">일상 인스타</p>
               </div>
               <div className="bg-white rounded-2xl p-3">
-                <img src="/insta2.png" alt="구리 인스타 QR" className="rounded-xl" />
+                <img src={`${basePath}/insta2.png`} alt="구리 인스타 QR" className="rounded-xl" />
                 <p className="text-xs text-center mt-2 text-neutral-700">구리 인스타</p>
               </div>
             </div>
