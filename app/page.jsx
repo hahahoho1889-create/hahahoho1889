@@ -52,7 +52,10 @@ export default function PersonalWebsiteStarter() {
           <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
             안녕하세요,
             <br />
-            <span className="inline-block whitespace-nowrap" style={{ fontSize: "calc(1em - 2pt)" }}>
+            <span
+              className="inline-block whitespace-nowrap"
+              style={{ fontSize: "calc(1em - 2pt)", lineHeight: 1 }}
+            >
               AI 강사 <span className="text-neutral-500">박도윤</span> 입니다.
             </span>
           </h1>
