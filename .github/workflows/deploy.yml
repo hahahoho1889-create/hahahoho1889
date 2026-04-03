@@ -39,12 +39,13 @@ jobs:
         run: npm run build
 
       - name: Disable Jekyll
-        run: touch out/.nojekyll
+        run: touch out/hahahoho1889/.nojekyll
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          # Next.js basePath puts the site under out/<repo>/ — Pages needs that folder as artifact root
+          path: ./out/hahahoho1889
 
   deploy:
     environment:
